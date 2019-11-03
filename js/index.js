@@ -18,21 +18,28 @@ topImg.addEventListener("mouseenter", () => {
     topImg.style.transition="all 0.3s";
   })
 
+const noContext = document.querySelector(".intro p");
+//no context menu on first paragraph
+noContext.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+})
+
 const wordColor = document.querySelector(".intro h2");
 //a double lick on the "welcome to fun bus" will turn it purple
 wordColor.addEventListener('dblclick',() => {
     wordColor.style.color = "purple";
   });
 
-// const reSize = document.querySelectorAll(".img-content");
+const reSize = document.querySelector(".img-content img");
+//changes a picture when page resizes
+window.addEventListener('resize', () => {
+    reSize.src = "img/fun.jpg";
+})
 
-// reSize.addEventListener('resize', () => {
-//     reSize.src = "https://www.google.com/search?hl=en&tbm=isch&sxsrf=ACYBGNS_yvCe_mve9MymiZ_5GWpP8tmlQg%3A1572817533194&source=hp&biw=1422&bih=677&ei=fUq_XYn7CMCv0PEPsu25gAc&q=lambda+school&oq=lambda+school&gs_l=img.3..0l9j0i30.1226.2948..3178...0.0..0.314.2721.0j3j8j1......0....1..gws-wiz-img.......35i39.mXdJamM8Nks&ved=0ahUKEwjJrfDygc_lAhXAFzQIHbJ2DnAQ4dUDCAY&uact=5#imgrc=lLL9o9Y7qgQULM:";
-// })
+
 
 let button = document.querySelector('a');
-
-
+//changes home button color
 function random(number) {
   return Math.floor(Math.random() * number);
 }
