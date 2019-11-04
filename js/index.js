@@ -1,4 +1,7 @@
 // Your code goes here
+window.addEventListener('load', () => {
+  window.alert('page is fully loaded');
+});
 
 const bgColor = document.querySelector('body');
 //change background color
@@ -36,6 +39,15 @@ window.addEventListener('resize', () => {
     reSize.src = "img/fun.jpg";
 })
 
+const focus = document.querySelector('a');
+
+// focus.addEventListener('focus', () => {
+//   window.alert('hi');
+// });
+
+// focus.addEventListener('blur', () => {
+//   window.alert('hello');
+// });
 
 
 let button = document.querySelector('a');
@@ -43,6 +55,7 @@ let button = document.querySelector('a');
 function random(number) {
   return Math.floor(Math.random() * number);
 }
+
 
 function randomColor() {
     return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
